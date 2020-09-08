@@ -1,0 +1,13 @@
+#!/usr/bin/env snakemake
+
+import pandas as pd
+import metapi
+
+
+shell.executable("bash")
+
+include: "fingerprint.smk"
+
+rule all:
+    input:
+        rules.cami_fingerprint_all.input

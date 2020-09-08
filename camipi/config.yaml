@@ -1,0 +1,20 @@
+params:
+  cami_client: "/ldfssz1/ST_META/share/User/zhujie/database/CAMI/client/camiClient.jar"
+
+  gen_assembly_fingerprint: True
+  gen_binning_fingerprint: True
+  gen_profiling_fingerprint: True
+
+input:
+  assembly: "assembly.tsv"
+  binning: "binning.tsv"
+  profiling: "profiling.tsv"
+
+  taxdb:
+    local: "/path/to/taxdb"
+    remote: "https://openstack.cebitec.uni-bielefeld.de:8080/swift/v1/CAMI_DATABASES/taxdb.tar.gz"
+
+output:
+  assembly: "results/fingerprint/assembly"
+  binning: "results/fingerprint/binning"
+  profiling: "results/fingerprint/profiling"
