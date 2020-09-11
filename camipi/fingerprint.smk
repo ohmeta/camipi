@@ -53,6 +53,7 @@ else:
     rule fingerprint_assembly_all:
         input:
 
+
 if config["params"]["gen_binning_fingerprint"] or config["params"]["gen_profiling_fingerprint"]:
     rule taxdb_prepare:
         output:
@@ -90,7 +91,7 @@ if config["params"]["gen_binning_fingerprint"]:
         params:
             id = "{sample}",
             cami_client = config["params"]["cami_client"]
-        shell:
+        run:
             fingerprint = get_fingerprint(
                 ["java", "-jar", params.cami_client, "-bf", input.bin, input.taxdb])
 
@@ -142,7 +143,7 @@ if config["params"]["gen_profiling_fingerprint"]:
         params:
             id = "{sample}",
             cami_client = config["params"]["cami_client"]
-        shell:
+        run:
             fingerprint = get_fingerprint(
                 ["java", "-jar", params.cami_client, "-pf", input.profile, input.taxdb])
 
