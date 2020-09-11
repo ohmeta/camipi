@@ -1,0 +1,31 @@
+localrules:
+  - fingerprint_assembly_all
+  - fingerprint_binning_all
+  - fingerprint_profiling_all
+  - cami_fingerprint_all
+  - all
+
+__default__:
+  queue: "st.q"
+  project: "st.m"
+  workdir: "./"
+  mem: "1G"
+  cores: 1
+
+fingerprint_assembly:
+  mem: "512M"
+  cores: 1
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+fingerprint_binning:
+  mem: "512M"
+  cores: 1
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
+
+fingerprint_profiling:
+  mem: "512M"
+  cores: 1
+  output: "logs/{rule}.{wildcards.sample}.o"
+  error: "logs/{rule}.{wildcards.sample}.e"
