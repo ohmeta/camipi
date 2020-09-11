@@ -18,14 +18,32 @@ fingerprint_assembly:
   output: "logs/{rule}.{wildcards.sample}.o"
   error: "logs/{rule}.{wildcards.sample}.e"
 
+fingerprint_assembly_merge:
+  mem: "512M"
+  cores: 1
+  output: "logs/{rule}.o"
+  error: "logs/{rule}.e"
+
 fingerprint_binning:
   mem: "512M"
   cores: 1
   output: "logs/{rule}.{wildcards.sample}.o"
   error: "logs/{rule}.{wildcards.sample}.e"
 
+fingerprint_binning_merge:
+  mem: "512M"
+  cores: 1
+  output: "logs/{rule}.o"
+  error: "logs/{rule}.e"
+
 fingerprint_profiling:
   mem: "512M"
   cores: 1
   output: "logs/{rule}.{wildcards.sample}.o"
   error: "logs/{rule}.{wildcards.sample}.e"
+
+fingerprint_profiling_merge:
+  mem: "512M"
+  cores: 1
+  output: "logs/{rule}.o"
+  error: "logs/{rule}.e"
