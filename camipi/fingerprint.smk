@@ -179,6 +179,7 @@ else:
 
 
 rule cami_fingerprint_all:
-    rules.fingerprint_assembly_all.input,
-    rules.fingerprint_binning_all.input,
-    rules.fingerprint_profiling_all.input
+    input:
+        rules.fingerprint_assembly_all.input,
+        rules.fingerprint_binning_all.input,
+        rules.fingerprint_profiling_all.input
