@@ -1,5 +1,6 @@
 #!/usr/bin/env snakemake
 
+import subprocess as subp
 import pandas as pd
 import metapi
 
